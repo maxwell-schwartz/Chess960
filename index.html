@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PureCSS Test</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <h1 id="header">Chess960 Position Generator</h1>
+    <div id="board">
+        <div class="pure-g">
+            <div class="pure-u-8-24">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/bRw.jpeg" class="square">
+            </div>
+            <div class="pure-u-1-24" class="square">
+                <img src="Images/bNb.jpeg">
+            </div>
+            <div class="pure-u-1-24" class="square">
+                <img src="Images/bBw.jpeg">
+            </div>
+            <div class="pure-u-1-24" class="square">
+                <img src="Images/bQb.jpeg">
+            </div>
+            <div class="pure-u-1-24" class="square">
+                <img src="Images/bKw.jpeg">
+            </div>
+            <div class="pure-u-1-24" class="square">
+                <img src="Images/bBb.jpeg">
+            </div>
+            <div class="pure-u-1-24" class="square">
+                <img src="Images/bNw.jpeg">
+            </div>
+            <div class="pure-u-1-24" class="square">
+                <img src="Images/bRb.jpeg">
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-8-24">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/bPb.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/bPw.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/bPb.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/bPw.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/bPb.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/bPw.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/bPb.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/bPw.jpeg">
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-8-24">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-8-24">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-8-24">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-8-24">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/dark_square.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/light_square.jpeg">
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-8-24">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wPw.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wPb.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wPw.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wPb.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wPw.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wPb.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wPw.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wPb.jpeg">
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-8-24">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wRb.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wNw.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wBb.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wQw.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wKb.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wBw.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wNb.jpeg">
+            </div>
+            <div class="pure-u-1-24">
+                <img src="Images/wRw.jpeg">
+            </div>
+        </div>
+    </div>
+    <div id="test">
+        <h2>{{message}}</h2>
+    </div>
+</body>
+</html>
