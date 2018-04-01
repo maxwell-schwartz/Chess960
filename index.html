@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PureCSS Test</title>
+    <title>Chess960 Generator</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="positions.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
     <h1 id="header">Chess960 Position Generator</h1>
@@ -15,28 +15,28 @@
             <div class="pure-u-8-24">
             </div>
             <div class="pure-u-1-24">
-                <img src="Images/bRw.jpeg" class="square">
+                <img :src="'Images/' + bPos[0]">
             </div>
-            <div class="pure-u-1-24" class="square">
-                <img src="Images/bNb.jpeg">
+            <div class="pure-u-1-24">
+                <img :src="'Images/' + bPos[1]">
             </div>
-            <div class="pure-u-1-24" class="square">
-                <img src="Images/bBw.jpeg">
+            <div class="pure-u-1-24">
+                <img :src="'Images/' + bPos[2]">
             </div>
-            <div class="pure-u-1-24" class="square">
-                <img src="Images/bQb.jpeg">
+            <div class="pure-u-1-24">
+                <img :src="'Images/' + bPos[3]">
             </div>
-            <div class="pure-u-1-24" class="square">
-                <img src="Images/bKw.jpeg">
+            <div class="pure-u-1-24">
+                <img :src="'Images/' + bPos[4]">
             </div>
-            <div class="pure-u-1-24" class="square">
-                <img src="Images/bBb.jpeg">
+            <div class="pure-u-1-24">
+                <img :src="'Images/' + bPos[5]">
             </div>
-            <div class="pure-u-1-24" class="square">
-                <img src="Images/bNw.jpeg">
+            <div class="pure-u-1-24">
+                <img :src="'Images/' + bPos[6]">
             </div>
-            <div class="pure-u-1-24" class="square">
-                <img src="Images/bRb.jpeg">
+            <div class="pure-u-1-24">
+                <img :src="'Images/' + bPos[7]">
             </div>
         </div>
         <div class="pure-g">
@@ -211,33 +211,60 @@
             <div class="pure-u-8-24">
             </div>
             <div class="pure-u-1-24">
-                <img src="Images/wRb.jpeg">
+                <img :src="'Images/' + wPos[0]">
             </div>
             <div class="pure-u-1-24">
-                <img src="Images/wNw.jpeg">
+                <img :src="'Images/' + wPos[1]">
             </div>
             <div class="pure-u-1-24">
-                <img src="Images/wBb.jpeg">
+                <img :src="'Images/' + wPos[2]">
             </div>
             <div class="pure-u-1-24">
-                <img src="Images/wQw.jpeg">
+                <img :src="'Images/' + wPos[3]">
             </div>
             <div class="pure-u-1-24">
-                <img src="Images/wKb.jpeg">
+                <img :src="'Images/' + wPos[4]">
             </div>
             <div class="pure-u-1-24">
-                <img src="Images/wBw.jpeg">
+                <img :src="'Images/' + wPos[5]">
             </div>
             <div class="pure-u-1-24">
-                <img src="Images/wNb.jpeg">
+                <img :src="'Images/' + wPos[6]">
             </div>
             <div class="pure-u-1-24">
-                <img src="Images/wRw.jpeg">
+                <img :src="'Images/' + wPos[7]">
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-10-24">
+            </div>
+            <div class="pure-u-4-24">
+                <button id="rand" class="pure-button" v-on:click="newPos">
+                    New Position
+                </button>
             </div>
         </div>
     </div>
-    <div id="test">
-        <h2>{{message}}</h2>
-    </div>
+    <script type="text/javascript">
+        var choice = (Math.floor(Math.random() * 960));
+        var bPos = positions[choice.toString()]['b'];
+        var wPos = positions[choice.toString()]['w']
+        var app = new Vue({
+            el: '#board',
+            data: {
+                positions: positions,
+                val: choice,
+                wPos: wPos,
+                bPos: bPos
+            },
+            methods: {
+                newPos: function() {
+                    this.val = (Math.floor(Math.random() * 960));
+                    this.wPos = this.positions[this.val.toString()]['w'];
+                    this.bPos = this.positions[this.val.toString()]['b'];
+                }
+            }
+        })
+    </script>
 </body>
 </html>
